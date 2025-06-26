@@ -33,7 +33,8 @@ Inspired by various cryptographic research papers
 **--dp_bits N**: Distinguished point mask bits (default: 12)  
 **--k N**: Jump table size (default: range_bits/2)  
 **--ram N**: RAM limit in GB (default: 16)  
-**--save-dp**: Save distinguished points to DP.txt  
+**--save-dp**: Save distinguished points to DP.bin  
+**--load-dp**: Load distinguished points from DP.bin. You can skip Phase1 
 
 ## 📊 Performance
 
@@ -156,5 +157,12 @@ git clone https://github.com/yourusername/Mark1.git
 cd Mark1
 g++ Mark1.cpp Int.cpp SECP256K1.cpp Point.cpp Random.cpp IntMod.cpp IntGroup.cpp Timer.cpp -O3 -march=native -funroll-loops -ftree-vectorize -fstrict-aliasing -fno-semantic-interposition -fvect-cost-model=unlimited -fno-trapping-math -fipa-ra -fipa-modref -flto -fassociative-math -fopenmp -mavx2 -mbmi2 -madx -std=c++17 -fopenmp -pthread -o Mark1
 ```
+
+## 🚧**VERSIONS**
+**V1.3**: Full SSD rework: double hashing, MAX_LOAD=0.5, bloom filter size increasing (10 bit), batched inserting/checking, MADV_SEQUENTIAL. Thanks OpenAI for ChatGPT helping to solve these problems. This is amazing!  
+**V1.2**: SSD rework. Dp table storing on SSD, instead of RAM. A few security updates and speed increasing.  
+**V1.1**: Added save and load distinguished points (DP) from file (DP.bin). This feature was coded by NoMachine.  
+**V1.0**: Release
+
 ## ✌️TIPS
 BTC: bc1qtq4y9l9ajeyxq05ynq09z8p52xdmk4hqky9c8n
