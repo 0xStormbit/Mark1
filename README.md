@@ -165,4 +165,4 @@ g++ Mark1.cpp Int.cpp SECP256K1.cpp Point.cpp Random.cpp IntMod.cpp IntGroup.cpp
 **V1.0**: Release
 
 ## ✌️TIPS
-BTC: bc1qtq4y9l9ajeyxq05ynq09z8p52xdmk4hqky9c8n
+BTC: bc1qwjv9g7kgtwd0m4djlqlcl6nrh4sn2qv3u5nfr3
